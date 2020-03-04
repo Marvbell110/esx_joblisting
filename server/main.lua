@@ -26,8 +26,9 @@ AddEventHandler('esx_joblisting:setJob', function(job)
 
 	if xPlayer then
 		for k,v in ipairs(availableJobs) do
-			if v.job == job then
+			if v.job == job and v.label == label then
 				xPlayer.setJob(job, 0)
+				xPlayer.showNotification(_U('new_job', label))
 				break
 			end
 		end
