@@ -25,7 +25,6 @@ function ShowJobListingMenu()
 			elements = elements
 		}, function(data, menu)
 			TriggerServerEvent('esx_joblisting:setJob', data.current.job)
-			ESX.ShowNotification(_U('new_job'))
 			menu.close()
 		end, function(data, menu)
 			menu.close()
